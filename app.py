@@ -21,7 +21,8 @@ app.config['SECRET_KEY'] = 'aslkdjfacnzcmfnbej32io26a4s4d1a2f31bd31bfv1xc32vb1xc
 #     app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
 
 app.debug = False
-app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
+# app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
 
 # TODO: Fix the URL's for the navigation bar in the html files. They currently go off of local host, which is not correct. I think
 #  that may be what's causing the issue with deploying and using this web app successfully.
