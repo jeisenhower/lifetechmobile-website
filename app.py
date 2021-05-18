@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
 from models import Quotes, NewsLetterSubs
-from database import engine, SessionLocal, SQLALCHEMY_DATABASE_URI, PRODUCTION_SQL_DATABASE_URI
+from database import engine, SessionLocal, SQLALCHEMY_DATABASE_URI
+# , PRODUCTION_SQL_DATABASE_URI
 import models
 import datetime
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
+db = models.Base.metadata
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
