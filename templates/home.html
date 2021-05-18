@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="web design, affordable web design, professional web design, life-tech mobile, life tech mobile, life-tech, life tech, life, tech, mobile, mobile tech, media, film, api, application, app, application programming interface, app development, web development, software as a service, saas">
+		<meta name="author" content="Joel Eisenhower">
+		<title>LifeTech Mobile | Welcome</title>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">LifeTech</span> Mobile</h1>
+				</div>
+				<nav>
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="http://127.0.0.1:5000/about">About</a></li>
+						<li><a href="http://127.0.0.1:5000/services">Services</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="showcase">
+			<div class="container">
+				<h1>Affordable Solutions Designed to Meet Your Technology Needs</h1>
+				<p>LifeTech Mobile is dedicated to providing its customers with affordable solutions to any issue through the
+					utilization of modern technology and innovation. Here at LifeTech Mobile, we understand that knowledge is power
+					when paired with a creative mind, and consequently we have developed a culture dedicated to continuous learning and
+					creativity in solving modern day problems. We look forward to the possibility of learning and growing with you.
+				</p>
+			</div>
+		</section>
+
+		<section id="newsletter">
+			<div class="container">
+				<h1>Subscribe To Our Newsletter</h1>
+				<form action="/subscribe" method="post">
+					<input
+							type="email"
+							placeholder="Enter Email"
+							name="email"
+					>
+					<button type="submit" class="button_1">Subscribe</button>
+				</form>
+			</div>
+		</section>
+
+		<section id="boxes">
+			<div class="container">
+				<div class="box">
+                    <img id="" src="{{url_for('static', filename='flask_logo.png')}}" />
+					<h3>Python and Flask Framework</h3>
+					<p>We have extensive experience in building custom APIs, including REST APIs, and web apps with python using the Flask Framework.</p>
+				</div>
+				<div class="box">
+                    <img src="{{url_for('static', filename='sql_final_logo.png')}}" />
+					<h3>MySQL and SQLAlchemy</h3>
+					<p>MySQL is an invaluable tool in any web development stack. At LifeTech Mobile, we typically utilize it alongside SQLAlchemy and Flask to connect our APIs with any SQL database.</p>
+				</div>
+				<div class="box">
+                    <img src="{{url_for('static', filename='flutter.png')}}"/>
+					<h3>Flutter and Dart</h3>
+					<p>Flutter is a framework developed by Google on top of Dart, Google's very own programming language. We utilize Flutter and Dart to create user interfaces that run natively on desktop, Android, and iOS.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>LifeTech Mobile, Copyright &copy; 2021</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn app:lifetech_mobile

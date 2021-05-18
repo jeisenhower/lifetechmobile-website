@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="web design, affordable web design, professional web design, life-tech mobile, life tech mobile, life-tech, life tech, life, tech, mobile, mobile tech, media, film, api, application, app, application programming interface, app development, web development, software as a service, saas">
+		<meta name="author" content="Joel Eisenhower">
+		<title>LifeTech Mobile | Services</title>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">LifeTech</span> Mobile</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="http://127.0.0.1:5000/home">Home</a></li>
+						<li><a href="http://127.0.0.1:5000/about">About</a></li>
+						<li class="current"><a href="http://127.0.0.1:5000/services">Services</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="newsletter">
+			<div class="container">
+				<h1>Subscribe To Our Newsletter</h1>
+				<form action="/subscribe", method="post">
+					<input
+							type="email"
+							placeholder="Enter Email"
+							name="email"
+					>
+					<button type="submit" class="button_1">Subscribe</button>
+				</form>
+			</div>
+		</section>
+
+		<section id="main">
+			<div class="container">
+				<article id="main-col">
+					<h1 class="page-title">Services</h1>
+					<ul id="services">
+						<li>
+							<h3>Back End Development</h3>
+							<p>
+								We specialize in writing custom APIs and providing software as a service, securing server side code, deploying to servers through AWS and other cloud based storage services, and maintaining those servers. In doing so, you can have peace of mind that the solution is effective, secure, and simple so that you can go about your business seamlessly.
+							</p>
+						</li>
+						<li>
+							<h3>Mobile App Development</h3>
+							<p>
+								Mobile applications are central to many modern day solutions. At LifeTech Mobile, we tailor each one of our mobile apps to fit the specific needs of our client across any platform, including iOS, Android, and even desktop apps.
+							</p>
+						</li>
+						<li>
+							<h3>Web Design and Web App Development</h3>
+							<p>
+								Web apps allow users to interact with a websites that provide a service. At LifeTech Mobile, we pride ourselves in offering effective and user friendly solutions to provide such services.
+							</p>
+						</li>
+					</ul>
+				</article>
+
+				{% if message %}
+					<p class="message">{{ message | safe }}</p>
+				{% endif %}
+				<aside id="sidebar">
+					<div class="dark">
+						<h3>Get a quote</h3>
+						<form class="quote", action="/submit", method="post">
+							<div>
+								<label>Name</label><br>
+								<input
+										type="text"
+										name="name"
+										placeholder="Name"
+								/>
+							</div>
+							<div>
+								<label>Email</label><br>
+								<input
+										type="text"
+										name="email"
+										placeholder="Email"
+								>
+							</div>
+							<div>
+								<label>Message</label><br>
+								<textarea
+										name="message"
+										placeholder="Type your message here..."
+								>
+								</textarea>
+							</div>
+							<button class="button_1" type="submit">Send</button>
+						</form>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<footer>
+			<p>LifeTech Mobile, Copyright &copy; 2021</p>
+		</footer>
+	</body>
+</html>
