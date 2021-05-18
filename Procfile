@@ -1,1 +1,1 @@
-web: gunicorn app:lifetech_mobile
+web: gunicorn app:lifetechmobile
