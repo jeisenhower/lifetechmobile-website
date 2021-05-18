@@ -1,6 +1,5 @@
 from models import Base
 from config import SQLALCHEMY_DATABASE_URI
-# , PRODUCTION_SQL_DATABASE_URI
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
