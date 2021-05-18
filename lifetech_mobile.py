@@ -11,14 +11,17 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # NOTE: I actually don't need this. This is used for generating tokens and things like that, which I don't need at the moment
 app.config['SECRET_KEY'] = 'aslkdjfacnzcmfnbej32io26a4s4d1a2f31bd31bfv1xc32vb1xc3v1x31x3v1bc'
 
-ENV = 'prod'
+# ENV = 'prod'
+#
+# if ENV == 'dev':
+#     app.debug = True
+#     app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
+# else:
+#     app.debug = False
+#     app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
 
-if ENV == 'dev':
-    app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
-else:
-    app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
+app.debug = False
+app.config['SQLALCHEMY_DATABASE_URI'] = PRODUCTION_SQL_DATABASE_URI
 
 
 @app.route("/")
