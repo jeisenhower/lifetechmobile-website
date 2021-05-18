@@ -4,7 +4,8 @@ from database import engine, SessionLocal, SQLALCHEMY_DATABASE_URI
 import models
 import datetime
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
+db = models.Base.metadata
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
